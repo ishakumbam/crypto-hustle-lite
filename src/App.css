@@ -1,0 +1,99 @@
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+    opacity: 0.2;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.whole-page {
+  padding: 15px 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.whole-page::before {
+  content: '$ ₿ € ¥ $ ₿ € ¥';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 6rem;
+  font-weight: bold;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  animation: float 8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.whole-page h1 {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+
+.whole-page input {
+  position: relative;
+  z-index: 2;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+ul {
+  position: relative;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+li.main-list {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+li.main-list:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  padding-right: 0;
+}
+  
